@@ -1,0 +1,17 @@
+[package]
+name = "probability-symbolic"
+version = "0.0.1"
+edition = "2021"
+authors = ["me <me@gmail.com>"]
+
+[lib]
+name = "probability_symbolic"
+path = "src/lib.rs"
+
+[[bin]]
+name = "symprob"
+path = "src/bin.rs"
+
+[dependencies]
+bit-set = "0.5.2"
+nanoid = "0.4.0"
