@@ -50,6 +50,7 @@ impl<'s> Situation<'s> {
         let mut stack: Vec<&Probability>;
 
         for char in notation.chars() {
+            // TODO: macro-ify, because otherwise this will be hecka slow. https://doc.rust-lang.org/book/ch19-06-macros.html
             stack.push(match char {
                 '1' => &p1,
                 '2' => &p2,
@@ -103,5 +104,9 @@ impl<'s> Situation<'s> {
         // TODO: implement
         // start by adding the goal to the queue
         // repeatedly expand it, and add anything we don't know yet into the queue or smt
+        //  - try evaluating
+        //  - add any unknowns to the queue, append self to prev[unknown]
+        //  - if anything is evaluated successfully, re-evaluate everything in prev[self] (re-add
+        //     to the queue)
     }
 }
