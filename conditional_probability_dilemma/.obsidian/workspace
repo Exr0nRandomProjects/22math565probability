@@ -1,0 +1,95 @@
+{
+  "main": {
+    "id": "769e7c112ac2ae57",
+    "type": "split",
+    "children": [
+      {
+        "id": "e8d7cb2adae69ccf",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "readme.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4495866afbfc66d4",
+    "type": "split",
+    "children": [
+      {
+        "id": "1fb805179cd39670",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8dc5cc96cbd3e0af",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "b9fb8216a5978840",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "957959a32c67c454",
+    "type": "split",
+    "children": [
+      {
+        "id": "b1c8cb1a6c793c0a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4f1783403c133fea",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "readme.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "e8d7cb2adae69ccf",
+  "lastOpenFiles": [
+    "readme.md",
+    "IMG_5439.jpg"
+  ]
+}
