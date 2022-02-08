@@ -2,7 +2,7 @@ use rand::prelude::*;
 use rayon::prelude::*;
 use indicatif::ProgressIterator;
 
-const NUM_ITERS: u32 = 10_000;
+const NUM_ITERS: u32 = 100_000;
 
 //fn get_expected_parallel(give_up_predicate: &dyn Fn(u64, u64) -> bool,
 //                win_predicate: &dyn Fn(u64, u64) -> bool) -> (f64, f64) {
@@ -74,7 +74,8 @@ fn huxleys_thing(thresh: u64, anneal: &dyn Fn(u64) -> f64) -> (f64, f64) {
     })
 }
 
-let thresh = 100_000;
+let thresh = 1_000_000;
+let c = 0.57;    // up to 1
 let (num_success, avg_score) = huxleys_thing(thresh, &|x|
-                                             ((1f64 + (-(x as f64)/(thresh as f64)+1f64).sqrt())/2f64));
-println!("huxey plan | average win: {:.5} with win rate {:.5}", avg_score, num_success);
+                 ((1f64 + c*(-(x as f64)/(thresh as f64)+1f64).sqrt())/2f64));
+println!("huxey plan | average win: {:.5} with win rate {:.5} with thresh {} and c {}", avg_score, num_success, thresh, c);
