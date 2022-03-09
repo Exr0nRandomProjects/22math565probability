@@ -5,9 +5,9 @@ using ProgressMeter;
 
 num_samples = 30
 
-function sample_N(n, sample)
+function sample_N(n, dist)
     ret = zeros(n)
-    ret = map(x -> sample(), ret)
+    ret = map(x -> rand(dist), ret)
 
     mean = sum(ret) / n
 
@@ -21,8 +21,8 @@ end
 
 println("starting computation...")
 
-function plot_central_limit_thm(n_rounds, n_samples, sample_fn)
-    means = [sample_N(n_samples, sample_fn) for _ = 1:n_rounds]
+function plot_central_limit_thm(n_rounds, n_samples, dist)
+    means = [sample_N(n_samples, dist) for _ = 1:n_rounds]
     println("means len: $(length(means)), stddev: $(std(means))")
     for p in 2:6
         p = histogram(means[1:10^p], bins=40, title="rounds: $(10^p)")
@@ -32,4 +32,4 @@ function plot_central_limit_thm(n_rounds, n_samples, sample_fn)
     end
 end
 
-plot_central_limit_thm(1e6, num_samples, rand)
+plot_central_limit_thm(1e6, num_samples, Normal(0, 1))
